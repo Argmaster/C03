@@ -1,0 +1,24 @@
+{
+    "none": [
+
+    ],
+    "python": [
+        ["CLASS_NAME", ["class\\s+.*?:"], {"foreground": "#23f77b"}],
+        ["FUNCTION_NAME", ["def\\s*?.*?\\(|="], {"foreground": "#62fca2"}],
+        ["FUNCTION_CALL", ["^[a-zA-Z_]+?\\(.*?\\):"], {"foreground": "#4dd17e"}],
+        ["INTEGER", ["^\\d{1,}|[\\s=\\[\\{\\(]\\d{1,}"], {"foreground": "#f8ff8c"}],
+        ["FLOAT", ["\\d*\\.\\d{1,}"], {"foreground": "#a2ff57"}],
+        ["KEYWORD", ["def\\s|lambda.*?:|class\\s|import\\s|while\\s|:|from\\s|\\sas\\s|for\\s|\\sin\\s|import\\s*|break|continue|return|yield|if\\s|else\\s|elif"], {"foreground": "#45bbff"}],
+        ["SPEC_KEYWORD", ["async|self|await"], {"foreground": "#ffd063"}],
+        ["OPERATOR", ["==|<=|>=|!=|>|<|\\sis\\s|\\sin\\s|\\snot\\s|\\sor\\s|\\sand\\s|\\sTrue|\\sFalse|\\sNone"], {"foreground": "#debb59"}],
+        ["ARITHMETIC_OPERATOR", ["\\+|-|\\*|\\&|\\||/|//"], {"foreground": "#59b6de"}],
+        ["SPEC_INT", ["0b[0-1]*|0o[0-7]*|0x[0-9A-F]*"], {"foreground": "#3781f0"}],
+        ["COMMENT", ["\"\"\"[a-zA-Z0-9\\s\\n]\"\"\"|'''.*?'''|^#.*?.*\n"], {"foreground": "#AAAAAA"}],
+        ["STRING", ["'.*?'|\".*?\""], {"foreground": "#62b37d"}],
+        ["RAW_STRING", ["r'.*?'|r\".*?\""], {"foreground": "#cf5e38"}],
+        ["BYTE_STRING", ["b'.*?'|b\".*?\""], {"foreground": "#529ed1"}],
+        ["FORMATED_STRING", ["f\".*?\\{.*?\\}.*?\"", "f\".*?\""], {"foreground": "#50cc64"}],
+        ["CURLYBRACKET", ["\\{|\\}|\\{.*?:.[>=^<][\\s\\-+]*\\d*\\.*\\d*f*\\}|%s|%d|%"], {"foreground": "#528cff"}],
+        ["BRACKET", ["\\(|\\)|\\[|\\]"], {"foreground": "#59bdde"}]
+    ]
+}

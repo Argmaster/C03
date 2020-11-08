@@ -1,0 +1,53 @@
+#NEXUS
+[written Sat Jun 07 10:44:01 PDT 2008 by Mesquite  version 2.5 BETA 2 (build j76) at Thrandina.local/192.168.0.136 (Wayne Maddison)]
+
+BEGIN TAXA;
+	TITLE Hominidae;
+	DIMENSIONS NTAX=7;
+	TAXLABELS
+Homo_sapiens Pan_paniscus Pan_troglodytes Gorilla_gorilla Pongo_abelli Pongo_pygmaeus Hylobates_sp.
+	;
+
+
+END;
+
+
+BEGIN CHARACTERS;
+	TITLE  'Matrix in file "07-dataEditinga.nex"';
+	DIMENSIONS  NCHAR=3;
+	FORMAT DATATYPE = STANDARD GAP = - MISSING = ? SYMBOLS = "  0 1";
+	CHARSTATELABELS
+
+		1 ogon / obecny brak, 2 szeroka_kosc_biodrowa / nie tak, 3 rozwiniete_wedzidelko_jezyka / nie tak   ;
+	MATRIX
+
+	Homo_sapiens     1 1 1
+	Pan_paniscus     1 1 1
+	Pan_troglodytes  1 1 1
+	Gorilla_gorilla  1 1 1
+	Pongo_abelii     1 1 0
+	Pongo_pygmaeus   1 1 0
+	Hylobates_sp     1 0 0
+
+
+;
+
+
+
+END;
+BEGIN TREES;
+	Title 'Trees from "07-dataEditinga.nex"';
+	LINK Taxa = Taxa;
+	TRANSLATE
+		1 Homo_sapiens,
+		2 Pan_paniscus,
+		3 Pan_troglodytes,
+		4 Gorilla_gorilla,
+		5 Pongo_abelii,
+		6 Pongo_pygmaeus,
+		7 Hylobates_sp,
+		;
+	TREE First_Tree = (((((Pan_troglodytes,Pan_paniscus),Homo_sapiens),Gorilla_gorilla),(Pongo_pygmaeus,Pongo_abelii)),Hylobates_sp);
+
+
+END;
