@@ -1,6 +1,6 @@
 # C03
 
-Simple (SIC!) application to compare two files, written in Python using tkinter lib
+Simple (SIC!) application for comparing files in pairs, written in Python using Tkinter lib
 
 # awthemes
 
